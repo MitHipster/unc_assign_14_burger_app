@@ -5,7 +5,7 @@ const connection = require('./connection.js');
 // Object to hold our SQL statement functions.
 const orm = {
   selectAll: (table, order, call) => {
-    const qry = 'SELECT * FROM ?? ORDER BY ? DESC';
+    const qry = 'SELECT * FROM ?? ORDER BY ?? DESC';
     connection.query(qry, [table, order], (err, result) => {
       call(err, result);
     });
