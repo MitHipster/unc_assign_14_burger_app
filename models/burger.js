@@ -7,6 +7,11 @@ const burger = {
     orm.selectAll('*', 'burgers', (err, data) => {
       call(err, data);
     });
+  },
+  updateOne: (update, cond, call) => {
+    orm.updateOne('burgers', update, cond, (err, data) => {
+      call(err, data);
+    });
   }
 };
 

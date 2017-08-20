@@ -14,5 +14,16 @@ router.get('/', (req, res) => {
   });
 });
 
+// Route to update burger to 'devoured'
+router.put('/:id', (req, res) => {
+  const cond = req.params.id;
+  // Convert form value from string to boolean
+  const update = Boolean(req.body.devoured);
+  burger.updateOne(update, cond, (err, data) => {
+    if (err) throw err;
+    res.redirect('/');
+  });
+});
+
 // Export routes for server.js to use.
 module.exports = router;
