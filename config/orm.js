@@ -1,15 +1,21 @@
-var connection = require('./connection.js');
+/*jslint esversion: 6, browser: true*/
+// Require MySQL connection
+const connection = require('./connection.js');
 
-var orm = {
-  selectAll: function() {
+// Object to hold our SQL statement functions.
+const orm = {
+  selectAll: (cols, table, call) => {
+    const qry = 'SELECT ?? FROM ??';
+    connection.query(qry, [cols, table], (err, result) => {
+      call(err, result);
+    });
+  },
+  insertOne: () => {
 
   },
-  insertOne: function() {
-
-  },
-  updateOne: function() {
+  updateOne: () => {
 
   }
 };
 
-module.exports = ORM;
+module.exports = orm;
