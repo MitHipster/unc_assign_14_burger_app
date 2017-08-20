@@ -3,8 +3,13 @@ const orm = require('../config/orm.js');
 
 // Add calls to ORM functions and add module exports method
 const burger = {
-  selectAll: (call) => {
-    orm.selectAll('*', 'burgers', (err, data) => {
+  selectAll: (order, call) => {
+    orm.selectAll('burgers', order, (err, data) => {
+      call(err, data);
+    });
+  },
+  insertOne: (insert, call) => {
+    orm.insertOne('burgers', insert, (err, data) => {
       call(err, data);
     });
   },

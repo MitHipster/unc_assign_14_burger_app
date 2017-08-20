@@ -8,17 +8,28 @@ const router = express.Router();
 
 // Router to get all burgers from the table
 router.get('/', (req, res) => {
-  burger.selectAll( (err, data) => {
+  const order = 'date';
+  burger.selectAll(order, (err, data) => {
     if (err) throw err;
     res.render('index', {burgers: data});
   });
 });
 
+// Route to add an uneaten burger to the list
+router.post('/', (req, res) => {
+  const insert = {burger_name: req.body.burger_name};
+  // const name = req.body.burger_name;
+  burger.insertOne(insert, (err, data) => {
+    if (err) throw err;
+    res.redirect('/');
+  });
+});
+
 // Route to update burger to 'devoured'
 router.put('/:id', (req, res) => {
-  const cond = req.params.id;
   // Convert form value from string to boolean
-  const update = Boolean(req.body.devoured);
+  const update = {devoured: Boolean(req.body.devoured)};
+  const cond = {id: req.params.id};
   burger.updateOne(update, cond, (err, data) => {
     if (err) throw err;
     res.redirect('/');
@@ -27,7 +38,7 @@ router.put('/:id', (req, res) => {
 
 // Route to delete burger from the database
 router.delete('/:id', (req, res) => {
-  const cond = req.params.id;
+  const cond = {id: req.params.id};
   burger.deleteOne(cond, (err, data) => {
     if (err) throw err;
     res.redirect('/');
