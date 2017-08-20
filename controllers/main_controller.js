@@ -25,5 +25,14 @@ router.put('/:id', (req, res) => {
   });
 });
 
+// Route to delete burger from the database
+router.delete('/:id', (req, res) => {
+  const cond = req.params.id;
+  burger.deleteOne(cond, (err, data) => {
+    if (err) throw err;
+    res.redirect('/');
+  });
+});
+
 // Export routes for server.js to use.
 module.exports = router;

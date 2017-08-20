@@ -12,6 +12,11 @@ const burger = {
     orm.updateOne('burgers', update, cond, (err, data) => {
       call(err, data);
     });
+  },
+  deleteOne: (cond, call) => {
+    orm.deleteOne('burgers', cond, (err, data) => {
+      call(err, data);
+    });
   }
 };
 

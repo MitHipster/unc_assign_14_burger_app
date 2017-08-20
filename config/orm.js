@@ -16,7 +16,12 @@ const orm = {
   updateOne: (table, update, cond, call) => {
     const qry = 'UPDATE ?? SET devoured = ? WHERE id = ?';
     connection.query(qry, [table, update, cond], (err, result) => {
-      if (err) console.log('SQL', this.sql);
+      call(err, result);
+    });
+  },
+  deleteOne: (table, cond, call) => {
+    const qry = 'DELETE FROM ?? WHERE id = ?';
+    connection.query(qry, [table, cond], (err, result) => {
       call(err, result);
     });
   }

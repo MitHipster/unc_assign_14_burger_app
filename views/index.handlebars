@@ -20,7 +20,6 @@
     <li>
       <p><span>{{~id}} </span>{{this.burger_name~}}</p>
       <form action="/{{this.id}}?_method=DELETE" method="POST">
-        <input type="hidden" name="devoured" value="true">
         <button type="submit">Delete It</button>
       </form>
     </li>
