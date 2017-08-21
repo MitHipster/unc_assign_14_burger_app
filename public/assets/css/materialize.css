@@ -6023,5 +6023,9 @@ input[type=range]:focus::-ms-fill-upper {
   100% {
     opacity: 0;
     transform: scale(1.5); } }
+.nav-wrapper img {
+  width: 48px;
+  padding-top: 8px;
+  margin-right: 16px; }
 
 /*# sourceMappingURL=materialize.css.map */
