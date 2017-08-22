@@ -6026,7 +6026,8 @@ input[type=range]:focus::-ms-fill-upper {
 @media only screen and (max-width: 600px) {
   .nav-wrapper .brand-logo {
     font-size: 1.6rem; } }
-.nav-wrapper #mobile-menu h5 {
+
+#mobile-menu h5 {
   color: rgba(0, 0, 0, 0.87);
   margin-left: 16px; }
 
@@ -6036,5 +6037,26 @@ input[type=range]:focus::-ms-fill-upper {
 @media only screen and (min-width: 601px) {
   .parallax img {
     width: 100%; } }
+
+.header.offset:before {
+  display: block;
+  content: "";
+  height: 64px;
+  /* Height of fixed navbar */
+  margin-top: -64px;
+  /* Negative margin to offset height */
+  visibility: hidden; }
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  padding: 20px; }
+  .card .card-content .card-title {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    font-size: 22px;
+    overflow-y: scroll; }
 
 /*# sourceMappingURL=materialize.css.map */
