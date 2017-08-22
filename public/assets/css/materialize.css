@@ -6023,6 +6023,14 @@ input[type=range]:focus::-ms-fill-upper {
   100% {
     opacity: 0;
     transform: scale(1.5); } }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
 @media only screen and (max-width: 600px) {
   .nav-wrapper .brand-logo {
     font-size: 1.6rem; } }
@@ -6058,5 +6066,9 @@ input[type=range]:focus::-ms-fill-upper {
     height: 64px;
     font-size: 22px;
     overflow-y: scroll; }
+.card .card-reveal {
+  padding: 20px; }
+  .card .card-reveal .card-title {
+    font-size: 22px; }
 
 /*# sourceMappingURL=materialize.css.map */
