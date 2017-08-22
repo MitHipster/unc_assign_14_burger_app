@@ -1,0 +1,63 @@
+// Sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+// Navbar
+.nav-wrapper {
+  .brand-logo {
+    @media #{$small-and-down} {
+      font-size: 1.6rem;
+    }
+  }
+}
+#mobile-menu {
+  h5 {
+    color: $off-black;
+    margin-left: 16px;
+  }
+}
+
+// Parallax
+.parallax img {
+    @media #{$small-and-down} { max-width: 225%; }
+    @media #{$medium-and-up} { width: 100%; }
+}
+
+// Adjust link positions to account for fixed header
+.header.offset:before {
+	display: block;
+ 	content: "";
+  height: 64px; /* Height of fixed navbar */
+  margin-top: -64px; /* Negative margin to offset height */
+  visibility: hidden;
+}
+
+// Cards
+.card {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    padding: 20px;
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      height: 64px;
+      font-size: 22px;
+      overflow-y: scroll;
+    }
+  }
+  .card-reveal {
+    padding: 20px;
+    .card-title {
+      font-size: 22px;
+    }
+  }
+}
