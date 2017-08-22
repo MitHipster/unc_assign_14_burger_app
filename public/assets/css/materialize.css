@@ -2513,7 +2513,7 @@ nav ul a span.badge {
     width: 85%; } }
 @media only screen and (min-width: 993px) {
   .container {
-    width: 70%; } }
+    width: 80%; } }
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
@@ -6023,9 +6023,18 @@ input[type=range]:focus::-ms-fill-upper {
   100% {
     opacity: 0;
     transform: scale(1.5); } }
-.nav-wrapper img {
-  width: 48px;
-  padding-top: 8px;
-  margin-right: 16px; }
+@media only screen and (max-width: 600px) {
+  .nav-wrapper .brand-logo {
+    font-size: 1.6rem; } }
+.nav-wrapper #mobile-menu h5 {
+  color: rgba(0, 0, 0, 0.87);
+  margin-left: 16px; }
+
+@media only screen and (max-width: 600px) {
+  .parallax img {
+    max-width: 225%; } }
+@media only screen and (min-width: 601px) {
+  .parallax img {
+    width: 100%; } }
 
 /*# sourceMappingURL=materialize.css.map */

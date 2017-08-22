@@ -1,7 +1,18 @@
 .nav-wrapper {
-  img {
-    width: 48px;
-    padding-top: 8px;
-    margin-right: 16px;
+  .brand-logo {
+    @media #{$small-and-down} {
+      font-size: 1.6rem;
+    }
   }
+  #mobile-menu {
+    h5 {
+      color: $off-black;
+      margin-left: 16px;
+    }
+  }
+}
+
+.parallax img {
+    @media #{$small-and-down} { max-width: 225%; }
+    @media #{$medium-and-up} { width: 100%; }
 }
