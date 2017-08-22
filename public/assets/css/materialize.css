@@ -2510,10 +2510,10 @@ nav ul a span.badge {
 
 @media only screen and (min-width: 601px) {
   .container {
-    width: 85%; } }
+    width: 90%; } }
 @media only screen and (min-width: 993px) {
   .container {
-    width: 80%; } }
+    width: 85%; } }
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
