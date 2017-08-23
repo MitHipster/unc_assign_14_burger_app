@@ -30,12 +30,16 @@ main {
     @media #{$medium-and-up} { width: 100%; }
 }
 
+.tooltipped {
+  margin-left: 16px;
+}
+
 // Adjust link positions to account for fixed header
 .header.offset:before {
 	display: block;
  	content: "";
-  height: 64px; /* Height of fixed navbar */
-  margin-top: -64px; /* Negative margin to offset height */
+  height: 72px; /* Height of fixed navbar */
+  margin-top: -72px; /* Negative margin to offset height */
   visibility: hidden;
 }
 
@@ -61,6 +65,29 @@ main {
     padding: 20px;
     .card-title {
       font-size: 22px;
+    }
+  }
+}
+
+// Modal
+.modal {
+  .modal-content {
+    padding-left: 0;
+    padding-right: 0;
+    textarea {
+      height: auto;
+      resize: none;
+    }
+    label[for='desc'] {
+      margin-top: -10px;
+    }
+    .modal-close {
+      margin-left: 16px;
+    }
+  }
+  form {
+    .row:first-child {
+      margin-bottom: 0;
     }
   }
 }

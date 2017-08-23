@@ -25,6 +25,10 @@
       });
       // Initialize parallax effect
       $('.parallax').parallax();
+      // Initialize tooltip for add button
+      $('.tooltipped').tooltip({delay: 50});
+      // Open a modal using trigger
+      $('.modal').modal({dismissible: false});
       // Set smooth scroll click event on valid links
       // Select links with hashes
       $('a[href*="#"]')

@@ -17,7 +17,11 @@ router.get('/', (req, res) => {
 
 // Route to add an uneaten burger to the list
 router.post('/', (req, res) => {
-  const insert = {burger_name: req.body.burger_name};
+  const insert = {
+    burger_name: req.body.burger_name,
+    rest_name: req.body.rest_name,
+    description: req.body.description
+  };
   // const name = req.body.burger_name;
   burger.insertOne(insert, (err, data) => {
     if (err) throw err;
