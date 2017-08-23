@@ -6058,7 +6058,7 @@ main {
 .card .card-content {
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 187px;
   padding: 20px; }
   .card .card-content .card-title {
     display: flex;
@@ -6066,6 +6066,8 @@ main {
     height: 64px;
     font-size: 22px;
     overflow-y: scroll; }
+  .card .card-content p {
+    margin-bottom: 16px; }
 .card .card-reveal {
   padding: 20px; }
   .card .card-reveal .card-title {

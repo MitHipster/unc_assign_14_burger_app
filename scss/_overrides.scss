@@ -44,7 +44,7 @@ main {
   .card-content {
     display: flex;
     flex-direction: column;
-    height: 150px;
+    height: 187px;
     padding: 20px;
     .card-title {
       display: flex;
@@ -52,6 +52,9 @@ main {
       height: 64px;
       font-size: 22px;
       overflow-y: scroll;
+    }
+    p {
+      margin-bottom: 16px;
     }
   }
   .card-reveal {
