@@ -1,13 +1,18 @@
 /*jslint esversion: 6, browser: true*/
 const mysql = require('mysql');
+let connection;
 
-// Set up MySQL connection
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'burgers_db'
-});
+// Set up MySQL connection for deployment on Heroku
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'burgers_db'
+  });
+}
 
 // Establish connection
 connection.connect( err => {
