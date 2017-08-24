@@ -25,13 +25,18 @@ main {
 }
 
 // Parallax
-.parallax img {
+.parallax {
+  img {
     @media #{$small-and-down} { max-width: 225%; }
     @media #{$medium-and-up} { width: 100%; }
+  }
 }
-
-.tooltipped {
-  margin-left: 16px;
+#need-to-try {
+  position: relative;
+  .tooltipped {
+    position: absolute;
+    right: 0;
+  }
 }
 
 // Adjust link positions to account for fixed header
@@ -74,15 +79,8 @@ main {
   .modal-content {
     padding-left: 0;
     padding-right: 0;
-    textarea {
-      height: auto;
-      resize: none;
-    }
-    label[for='desc'] {
-      margin-top: -10px;
-    }
     .modal-close {
-      margin-left: 16px;
+      margin-left: 12px;
     }
   }
   form {
